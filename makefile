@@ -9,4 +9,4 @@ publish: build
 	docker push $(REGISTRY_URL)/$(PROJECT):$(VERSION)
 
 dev:
-	docker run --name php-dev -it --rm -p 80:80 -v `pwd`:/var/www/html $(REGISTRY_URL)/$(PROJECT):$(VERSION)
+	docker run --name php-dev -it --rm -p 6000:80 -v `pwd`:/var/www/html $(REGISTRY_URL)/$(PROJECT):$(VERSION)

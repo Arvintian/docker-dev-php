@@ -12,6 +12,4 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install -j$(nproc) zip
 RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 RUN a2enmod rewrite
-
-COPY entrypoint /usr/local/bin/
-CMD ["entrypoint"]
+RUN useradd arvin

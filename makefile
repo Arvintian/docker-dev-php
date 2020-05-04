@@ -1,4 +1,4 @@
-VERSION     = 7.2
+VERSION     = 7.2-1.0.0
 PROJECT     = php
 REGISTRY_URL = arvintian
 

@@ -13,3 +13,6 @@ RUN apt-get update && apt-get install -y \
 RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 RUN a2enmod rewrite
 RUN useradd arvin
+# user mods conf
+COPY user.conf /etc/apache2/mods-user-conf/user.conf
+RUN echo "IncludeOptional /etc/apache2/mods-user-conf/*.conf" >> /etc/apache2/apache2.conf
